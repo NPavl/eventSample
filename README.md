@@ -8,7 +8,7 @@
 - 🐟 https://ethereum.stackexchange.com/questions/87643/how-to-listen-to-contract-events-using-ethers-js (ethers.js)
 - 🐟 https://docs.ethers.io/v5/api/providers/provider/#Provider--events (ethers.js)
 - 🐟 https://docs.ethers.io/v5/concepts/events/ (ethers.js)
-- 🐟 https://www.youtube.com/watch?v=38WUVVoMZKM Integrate React.js with Smart Contracts (read / write / events)
+- 🐟 https://www.youtube.com/watch?v=38WUVVoMZKM Integrate React.js with Smart Contracts (read / write / **events**)
 
 
 > **старый простой пример с исп трюфеля - как на тестовой сети прослушать инвенты, изменить данные в контракте и получить ивент в консоль**: 
