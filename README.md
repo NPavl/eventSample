@@ -43,7 +43,7 @@ gates (28 years old)
 ~~~
 > **далее пробуем изменить данные на новые в методе setInstructor и сразу получить результат от прослушивателя событий**: 
 - truffle console 
-- truffle(development)>  let instance = await Coursetro.deployed()
+- truffle(development)>  let instance = await eventSample.deployed()
 > передаем новые параметры в метод setInstructor:
 - truffle(development)> instance.setInstructor("Vasia", 25) 
 > в коносоль сразу получаем новый обновленный результат: 
