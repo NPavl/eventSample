@@ -9,14 +9,14 @@ web3.eth.defaultAccount = web3.eth.accounts[0];
 // var abi = [{"anonymous":false,"inputs":[{"indexed":false,"name":"name","type":"string"},{"indexed":false,"name":"age","type":"uint256"}],"name":"Instructor","type":"event"},{"constant":false,"inputs":[{"name":"_fName","type":"string"},{"name":"_age","type":"uint256"}],"name":"setInstructor","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getInstructor","outputs":[{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]; 
 var eventSampleContract = web3.eth.contract(eventSampleJSON.abi);
 
-// Идентификатор контракта, который включается в выходную информацию о выполнении команды миграции, а также может быть найден в списке транзакций Ganache
-var contractId = '0x76fe49643908046c53f2aa9744ebddc55620add2'; // адресс контракта после миграции на тестовую сеть ganache после каждого перезапуска 
-// тестовой сети адрес контракта меняй его здесь.  
+// Идентификатор контракта, который включается в выходную информацию о выполнении команды миграции
+var contractId = '0x76fe49643908046c53f2aa9744ebddc55620add2';    
 var eventSample = eventSampleContract.at(contractId);
 
 var instructorEvent = eventSample.Instructor();
 var NameIvent = eventSample.Name();
 
+// подписка на ивент 
 NameIvent.watch(function(error, result) {
     if (!error) {
         console.info(result.args.name + ' ' + 'Вот такое имя');
@@ -26,6 +26,7 @@ NameIvent.watch(function(error, result) {
     
 })
 
+// подписка на ивент 
 instructorEvent.watch(function(error, result) {
     if (!error) {
         // Просмотр информации о компании
@@ -37,5 +38,6 @@ instructorEvent.watch(function(error, result) {
     }
 });
 
-Coursetro.setInstructor("gates", "28"); // дефолтное имя и возраст 
+// дефолтные 
+eventSample.setInstructor("gates", "28"); // дефолтное имя и возраст 
 
