@@ -26,7 +26,7 @@ module.exports = {
 - в отдельном окне создать и запустить скрипт: node test.js 
 > Прослушиватель события начнет работать и результат в консоль будет примерно такой: 
 ~~~
-**gates (28 years old)**
+gates (28 years old)
 {
   logIndex: 0,
   transactionIndex: 0,
@@ -58,7 +58,7 @@ module.exports = {
   type: 'mined',
   removed: false,
   event: 'Instructor',
-  **args: { name: 'Vasia', age: 25**
+  args: { name: 'Vasia', age: 25
 { s: 1, e: 1, c: [Array] } }
 }
 ~~~ 
