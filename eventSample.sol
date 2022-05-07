@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.4.22;
  
-contract Coursetro {
+contract eventSample {
     string fName;
     uint age;
     string sName;
